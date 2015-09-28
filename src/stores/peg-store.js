@@ -13,11 +13,11 @@ export class PegStore {
     this.dispatcher = dispatcher;
   }
 
-  @handle('peg.add')
+  @handle('peg:add')
   addPeg(action, peg) {
-    console.log('PegStore.addPeg', action, peg);
+    console.log('PegStore peg:add', action, peg);
     this.pegs.push(peg);
-    this.dispatcher.dispatch('peg.added', peg);
+    this.dispatcher.dispatch('pegs:changed', this.pegs);
   }
 
   getPegs() {
