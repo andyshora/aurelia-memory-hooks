@@ -1,0 +1,9 @@
+<template>
+  <require from="../components/peg/peg"></require>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <h2>Pegs</h2>
+    <peg repeat.for="peg of pegs" number.one-way="peg.number" word.one-way="peg.word"></peg>
+    <button click.delegate="onButtonClicked()">Add Peg</button>
+  </section>
+</template>

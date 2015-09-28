@@ -84,9 +84,6 @@ System.config({
       "aurelia-metadata": "github:aurelia/metadata@0.7.3",
       "core-js": "npm:core-js@0.9.18"
     },
-    "github:aurelia/event-aggregator@0.6.2": {
-      "aurelia-logging": "github:aurelia/logging@0.6.4"
-    },
     "github:aurelia/event-aggregator@0.8.0": {
       "aurelia-logging": "github:aurelia/logging@0.7.0"
     },
@@ -134,20 +131,8 @@ System.config({
     "github:aurelia/metadata@0.8.0": {
       "core-js": "npm:core-js@0.9.18"
     },
-    "github:aurelia/route-recognizer@0.6.2": {
-      "core-js": "npm:core-js@0.9.18"
-    },
     "github:aurelia/route-recognizer@0.7.0": {
       "aurelia-path": "github:aurelia/path@0.9.0",
-      "core-js": "npm:core-js@0.9.18"
-    },
-    "github:aurelia/router@0.10.4": {
-      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.2",
-      "aurelia-event-aggregator": "github:aurelia/event-aggregator@0.6.2",
-      "aurelia-history": "github:aurelia/history@0.6.1",
-      "aurelia-logging": "github:aurelia/logging@0.6.4",
-      "aurelia-path": "github:aurelia/path@0.8.1",
-      "aurelia-route-recognizer": "github:aurelia/route-recognizer@0.6.2",
       "core-js": "npm:core-js@0.9.18"
     },
     "github:aurelia/router@0.12.0": {
