@@ -30,12 +30,4 @@ export class Pegs {
 
   }
 
-  @handle('pegs:changed')
-  onPegsChanged(action, pegs) {
-    console.log('onPegsChanged', action, pegs);
-    this.pegs = pegs;
-  }
-
-  
-
 }
