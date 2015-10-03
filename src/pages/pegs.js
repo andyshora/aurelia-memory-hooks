@@ -1,5 +1,5 @@
 import {inject} from 'aurelia-framework';  
-import {Dispatcher, handle} from 'aurelia-flux'; 
+import {Dispatcher, handle, waitFor} from 'aurelia-flux'; 
 import {PegStore} from '../stores/peg-store'
 
 @inject(Dispatcher, PegStore)
@@ -11,7 +11,6 @@ export class Pegs {
   constructor(dispatcher, store) {
     this.dispatcher = dispatcher;
     this.store = store;
-    this.pegs = this.store.getPegs();
   }
 
   @handle('pegs:changed')

@@ -1,16 +1,22 @@
 import {inject} from 'aurelia-framework';  
-import {Dispatcher, handle} from 'aurelia-flux';
+import {Dispatcher, handle, waitFor} from 'aurelia-flux';
+import {DataService} from '../services/data-service.js';
 
-@inject(Dispatcher)
-export class PegStore {  
-  pegs = [
-    { number: 1, word: 'one' },
-    { number: 2, word: 'two' },
-    { number: 3, word: 'three' }
-  ];
+@inject(Dispatcher, DataService)
+export class PegStore {
 
-  constructor(dispatcher) {
+  constructor(dispatcher, dataService) {
     this.dispatcher = dispatcher;
+    this.dataService = dataService;
+    
+    this.fetchData();
+  }
+
+  fetchData() {
+    this.dataService.getPegs().then((pegs) => {
+      this.pegs = pegs;
+      this.dispatcher.dispatch('pegs:changed', this.pegs);
+    });
   }
 
   @handle('peg:add')

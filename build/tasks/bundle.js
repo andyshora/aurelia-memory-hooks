@@ -9,6 +9,7 @@ var config = {
       includes: [
         '*',
         '*.html!text',
+        '*.json!text',
         '*.css!text',
         'bootstrap/css/bootstrap.css!text'
       ],

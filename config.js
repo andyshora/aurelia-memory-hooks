@@ -43,6 +43,7 @@ System.config({
     "core-js": "npm:core-js@1.2.0",
     "fetch": "github:github/fetch@0.9.0",
     "font-awesome": "npm:font-awesome@4.4.0",
+    "jquery": "github:components/jquery@2.1.4",
     "text": "github:systemjs/plugin-text@0.0.2",
     "github:aurelia/animator-css@0.16.0": {
       "aurelia-metadata": "github:aurelia/metadata@0.8.0",

@@ -30,6 +30,13 @@ gulp.task('build-html', function () {
     .pipe(gulp.dest(paths.output));
 });
 
+// copies changed data files to the output directory
+gulp.task('build-data', function () {
+  return gulp.src(paths.data)
+    .pipe(changed(paths.output, {extension: '.json'}))
+    .pipe(gulp.dest(paths.output));
+});
+
 // copies changed css files to the output directory
 gulp.task('build-css', function () {
   return gulp.src(paths.css)
@@ -44,7 +51,7 @@ gulp.task('build-css', function () {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html', 'build-css'],
+    ['build-system', 'build-html', 'build-css', 'build-data'],
     callback
   );
 });
