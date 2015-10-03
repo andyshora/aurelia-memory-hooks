@@ -31,8 +31,4 @@ export class PegStore {
     this._pegs.push(peg);
     this.dispatcher.dispatch('pegs:changed', this._pegs);
   }
-
-  getPegs() {
-    return this._pegs;
-  }
 }
