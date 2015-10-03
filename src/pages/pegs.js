@@ -6,27 +6,13 @@ import {PegStore} from '../stores/peg-store'
 export class Pegs {
   heading = 'Here\'s your memory pegs';
 
-  pegs = [];
-
   constructor(dispatcher, store) {
     this.dispatcher = dispatcher;
     this.store = store;
   }
 
-  @handle('pegs:changed')
-  onPegsChanged(action, pegs) {
-    console.log('pegs:changed', action, pegs);
-    this.pegs = pegs;
-  }
-
   onButtonClicked() {
-    let p = {
-      number: this.pegs.length + 1,
-      word: 'another'
-    };
-    console.log('onButtonClicked,', p);
-    this.dispatcher.dispatch('peg:add', p);
-
+    this.dispatcher.dispatch('peg:add', { number: this.store.pegs.length + 1, word: 'another' });
   }
 
 }
